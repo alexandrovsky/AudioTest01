@@ -134,7 +134,7 @@ public class MIDI : MonoBehaviour {
 
 
 	MIDITrack ParseTrack (byte[] midi, int offset){
-		MIDITrack track = new MIDITrack ();
+		MIDITrack track = new MIDITrack();
 
 		Debug.Log ("track offset: " + offset);
 
@@ -142,15 +142,30 @@ public class MIDI : MonoBehaviour {
 		Debug.Log("MTrk: " + MTrk);
 		track.MTrk = BitConverter.ToUInt32(midi, offset);
 
-
-		string track_length = BitConverter.ToString(midi, offset+4, 4);
+		offset += 4;
+		string track_length = BitConverter.ToString(midi, offset, 4);
 		Debug.Log("track length: " + track_length);
-		track.track_length = (System.UInt32)(midi[offset+4] << 24 | midi[offset+5] << 16 | midi[offset+6] << 8 | midi[offset+7]);
+		track.track_length = (System.UInt32)(midi[offset] << 24 | midi[offset+1] << 16 | midi[offset+2] << 8 | midi[offset+3]);
+
+		offset += 4;
+		int start = 0;
+		while (start < track.track_length) {
+			MIDIEvent e = ParseEvent(midi, start + offset);
+		}
+
 
 
 		return track;
 	}
 
+
+	MIDIEvent ParseEvent(byte[] midi, int offset){
+
+		MIDIEvent e = new MIDIEvent();
+
+		return e;
+
+	}
 
 	// Update is called once per frame
 	void Update () {
