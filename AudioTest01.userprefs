@@ -1,11 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MIDISequencer.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MIDI.cs">
     <Files>
-      <File FileName="Assets/Scripts/MIDI.cs" Line="185" Column="3" />
-      <File FileName="Assets/Scripts/MIDISampler.cs" Line="14" Column="42" />
-      <File FileName="Assets/Scripts/MIDISequencer.cs" Line="43" Column="1" />
-      <File FileName="Assets/Scripts/MIDILevelGenerator.cs" Line="35" Column="33" />
+      <File FileName="Assets/Scripts/MIDI.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/MIDISampler.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/MIDISequencer.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/MIDILevelGenerator.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
